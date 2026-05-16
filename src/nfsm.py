@@ -25,7 +25,7 @@ def main():
 
 def run_fullscreen_cmd(window_id):
     subprocess.run(
-        ["niri", "msg", "action", "fullscreen-window", "--id", str(window_id)]
+        ["niri", "msg", "action", "maximize-window-to-edges", "--id", str(window_id)]
     )
 
 def handle_fullscreen_request():
