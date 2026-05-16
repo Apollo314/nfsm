@@ -35,6 +35,8 @@ def handle_fullscreen_request():
         capture_output=True,
         text=True,
     )
+    if props.stdout == "null":
+        return
     window_id = json.loads(props.stdout)["id"]
 
     # the window is exiting fullscreen
