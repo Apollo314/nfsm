@@ -35,7 +35,7 @@ def handle_fullscreen_request():
         capture_output=True,
         text=True,
     )
-    if props.stdout == "null":
+    if props.stdout.strip() == "null":
         return
     window_id = json.loads(props.stdout)["id"]
 
